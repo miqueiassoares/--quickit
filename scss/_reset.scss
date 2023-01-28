@@ -1,0 +1,21 @@
+@use "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  text-decoration: none;
+  color: variables.$text-color;
+  border: none;
+  z-index: 2;
+}
+
+html, body {
+  background: variables.$background-color-dark;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

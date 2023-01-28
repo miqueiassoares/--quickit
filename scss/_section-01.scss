@@ -1,0 +1,35 @@
+@use "./breakpoints";
+@use "./variables";
+
+.sectionOne {
+  @include breakpoints.mobile {
+    .background {
+      width: 375px;
+      height: 973px;
+      background: transparent url("../img/first-section/background-mibile.png");
+      z-index: 1;
+      position: absolute;
+    }
+
+    &__div__text {
+      margin: auto;
+      margin-top: 55px;
+      width: 335px;
+      text-align: center;
+    }
+    
+    &__title {
+      height: 144px;
+      font-weight: 900;
+      text-transform: capitalize;
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    &__text {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+    }
+  }
+}
