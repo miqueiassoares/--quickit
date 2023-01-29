@@ -11,11 +11,15 @@
   text-decoration: none;
   color: variables.$text-color;
   border: none;
-  z-index: 2;
 }
 
-html, body {
+body {
   background: variables.$background-color-dark;
   overflow-y: auto;
   overflow-x: hidden;
+  position: relative;
+}
+
+button, a {
+  cursor: pointer;
 }

@@ -1,0 +1,13 @@
+@use "./variables";
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #333;
+  
+}
+::-webkit-scrollbar-thumb {
+  background-color: #205BF1;
+  border:2px solid rgba(255, 255, 255, 0.181);
+}

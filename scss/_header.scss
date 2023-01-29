@@ -2,6 +2,35 @@
 @use "./variables";
 
 .header {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  width: 375px;
+  height: 64px;
+  &__logo {
+    width: 108.75px;
+    height: 30px;
+  }
+  &__nav { 
+    &__open__menu {
+      margin-left: -20px;
+      margin-bottom: -7px;
+    }
+  }
+  &__button__request {
+    background: variables.$button-color;
+    padding: 10px 15px;
+    box-shadow: 0px 5px 15px rgba(32, 91, 241, 0.2);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.header {
   @include breakpoints.mobile {
     margin-top: 10px;
     display: flex;
@@ -24,14 +53,6 @@
       &__list {
         display: none;
       }
-    }
-    &__button__request {
-      padding: 10px 15px;
-      background: variables.$button-color;
-      box-shadow: 0px 5px 15px rgba(32, 91, 241, 0.2);
-      font-weight: 700;
-      font-size: 1rem;
-      line-height: 1.5rem;
     }
   }
 }

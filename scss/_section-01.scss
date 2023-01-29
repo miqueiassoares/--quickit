@@ -3,12 +3,13 @@
 
 .sectionOne {
   @include breakpoints.mobile {
-    .background {
-      width: 375px;
-      height: 973px;
+    &{
       background: transparent url("../img/first-section/background-mibile.png");
-      z-index: 1;
-      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-y: 195px;
+      height: 1120px;
+      position: relative;
     }
 
     &__div__text {
@@ -30,6 +31,66 @@
       font-weight: 400;
       font-size: 1.125rem;
       line-height: 1.625rem;
+    }
+    .buttons {
+      margin-top: 35px;
+      button {
+        font-size: 1rem;
+        display: block;
+      }
+    }
+    &__button__request {
+      background: variables.$button-color;
+      margin: auto;
+      padding: 20px 30px;
+      width: 177px;
+      height: 64px;
+      box-shadow: 0px 5px 15px rgba(32, 91, 241, 0.2);
+    }
+    &__button__video {
+      margin: 20px auto;
+      width: 130px;
+      height: 54px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      img {
+        display: none;
+      }
+    }
+    .images{
+      .section__image {
+        box-shadow: -8px -8px 0px rgba(0, 0, 0, 0.15), 8px 8px 0px rgba(31, 32, 37, 0.15), 20px 20px 100px rgba(0, 0, 0, 0.4)
+      }
+      .image__profile__timer {
+        position: absolute;
+        width: 130px;
+        height: 60px;
+        left: -28px;
+        top: 500px;
+      }
+      .image__profiles {
+        display: none;
+      }
+      .image__task__big {
+        position: absolute;
+        width: 220px;
+        height: 140px;
+        left: 80px;
+        top: 600px;
+      }
+      .image__statistics {
+        width: 170px;
+        height: 200px;
+        position: absolute;
+        right: -130px;
+        top: 440px;
+      }
+    }
+    .companies {
+      margin-top: 400px;
+      display: flex;
+      flex-direction: column;
+      background: red;
     }
   }
 }
