@@ -1,0 +1,67 @@
+@use "./breakpoints";
+@use "./variables";
+
+.sectionTwo {
+  background: transparent url("../img/section-02/background.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: -100px top;
+  margin-top: 110px;
+  .sectionTwo__container {
+    padding-top: 20px;
+  }
+  .dashboard {
+    background: transparent url("../img/section-02/dashboard.png");
+    background-size: contain;
+    margin:auto;
+    margin-bottom: 60px;
+    width: 335px;
+    height: 230px;
+
+    filter: drop-shadow(-8px -8px 0px rgba(0, 0, 0, 0.15)) drop-shadow(8px 8px 0px rgba(31, 32, 37, 0.15)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4));
+  }
+  .create__layouts {
+    width: 335px;
+    margin: auto;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      gap: 20px;
+      text-align: center;
+      h3 {
+        font-weight: 900;
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+      }
+      h2 {
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 130%;
+        .text__red {
+          color: variables.$text-color-red;
+        }
+      }
+      p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    .container__picture {
+      margin-top: 51px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      picture {
+        img {
+          margin: auto;
+          width: 175.5px;
+        }
+      }
+    }
+    
+  }
+}
