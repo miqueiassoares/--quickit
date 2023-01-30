@@ -6,10 +6,9 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 30px 20px;
+  padding: 30px 20px 0px;
   width: 100%;
-  height: 1014px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   &__text {
     display: flex;
     flex-direction: column;
@@ -49,6 +48,7 @@
       padding: 0px;
       gap: 20px;
       div {
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -67,16 +67,15 @@
           opacity: .7;
         }
       }
+      &__one {
+        border-color: variables.$sideline-color-blue !important;
+      }
     }
   }
   .container__image {
-    height: 305px;
-    
-    picture {
-      img {
-        width: 100%;
-        height: auto;
-      }
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 }

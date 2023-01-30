@@ -13,11 +13,18 @@
   border: none;
 }
 
-body {
+html, body {
   background: variables.$background-color-dark;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
+}
+
+body {
+  background: transparent url("../img/first-section/background-mibile.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-y: 7%;
 }
 
 button, a {

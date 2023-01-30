@@ -1,0 +1,18 @@
+@use "./breakpoints";
+@use "./variables";
+
+.threeSquares {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+  gap: 12px;
+  width: 100%;
+  opacity: 0.1;
+  div {
+    width: 8px;
+    height: 8px;
+    background: #FFFFFF;
+  }
+}

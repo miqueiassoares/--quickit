@@ -2,22 +2,13 @@
 @use "./variables";
 
 .sectionOne {
-  &{
-    background: transparent url("../img/first-section/background-mibile.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: 195px;
-    height: 1120px;
-    position: relative;
-  }
-
+  position: relative;
   &__div__text {
     margin: auto;
     margin-top: 55px;
     width: 335px;
     text-align: center;
   }
-  
   &__title {
     height: 144px;
     font-weight: 900;
@@ -47,7 +38,7 @@
     box-shadow: 0px 5px 15px rgba(32, 91, 241, 0.2);
   }
   &__button__video {
-    margin: 20px auto;
+    margin: 20px auto 0px;
     width: 130px;
     height: 54px;
     background: rgba(255, 255, 255, 0.1);
@@ -56,16 +47,29 @@
       display: none;
     }
   }
+
+  .sectionOne__images {
+    margin-top: -35px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   .images{
+    margin-top: 40px;
+    
+    position: relative;
+    border: 2px solid white;
     .section__image {
       box-shadow: -8px -8px 0px rgba(0, 0, 0, 0.15), 8px 8px 0px rgba(31, 32, 37, 0.15), 20px 20px 100px rgba(0, 0, 0, 0.4)
     }
     .image__profile__timer {
       position: absolute;
+      top: 10px;
+      left: -35px;
       width: 130px;
       height: 60px;
-      left: -28px;
-      top: 500px;
     }
     .image__profiles {
       display: none;
@@ -75,26 +79,38 @@
       width: 220px;
       height: 140px;
       left: 50%;
+      top: 110px;
       transform: translate(-50%);
-      top: 600px;
     }
     .image__statistics {
-      width: 170px;
-      height: 200px;
+      width: 173px;
+      height: 200.9px;
       position: absolute;
       right: -120px;
-      top: 440px;
+      
     }
   }
+  .container__companies {
+    padding: 30px 20px;
+    margin-top: -100px;
+    @media screen and (max-width: 340px) {
+      & {
+        padding: 0;
+        transform: scale(.8);
+      }
+    }
+  }
+
   .companies {
-    margin: 425px auto;
     display: flex;
     flex-wrap: wrap;
-    width: 335px;
+    min-width: 300px;
     height: 350px;
     ul {
+      width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 20px;
     }
     &__title {
@@ -104,11 +120,11 @@
       line-height: 26px;
     }
     li {
-      width: 157.5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100%;
       gap: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 20px;
       background: rgba(255, 255, 255, 0.03);
       .figma {
