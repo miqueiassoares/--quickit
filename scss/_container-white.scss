@@ -1,0 +1,15 @@
+@use "./breakpoints";
+@use "./variables";
+
+.containerWhite {
+  background: #ffffff;
+  padding-top: 30px;
+  .threeSquares {
+    div {
+      background: variables.$background-color-dark;
+    }
+  }
+  h1, h2, h3, h4, p, span, li, a {
+    color: variables.$text-color-dark;
+  }
+}

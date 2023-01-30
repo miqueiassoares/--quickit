@@ -1,0 +1,113 @@
+@use "./breakpoints";
+@use "./variables";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  isolation: isolate;
+  width: 375px;
+  background: rgba(31, 32, 37, 0.02);
+  border-top: 1px solid rgba(31, 32, 37, 0.05);
+  margin: auto;
+  margin-top: 30px;
+  .more {
+    background: transparent url("../img/footer/background.png");
+    background-repeat: no-repeat;
+    background-position: right -20px;
+    background-size: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 375px;
+    
+    .column {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 30px;
+      width: 335px;
+      
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 25px;
+        width: 152.5px;
+        
+        h1 {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 26px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px;
+          gap: 15px;
+          width: 100%;
+          
+        }
+      }
+    }
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+    width: 375px;
+    height: 140px;
+    border-top: 1px solid rgba(31, 32, 37, 0.03);
+    .rights {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0px;
+      gap: 12px;
+      width: 215px;
+      height: 56px;
+      .copyright {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .privacy__terms {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 12px;
+        width: 197px;
+        height: 24px;
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          opacity: .5;
+        }
+      }
+    }
+    .socialNetworks {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 20px;
+      width: 335px;
+      height: 24px;
+    }
+  }
+}

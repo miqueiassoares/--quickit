@@ -1,0 +1,123 @@
+@use "./breakpoints";
+@use "./variables";
+
+.sectionSeven {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  gap: 10px;
+  width: 375px;
+  margin: auto;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .text__blue {
+    color: variables.$text-color-blue;
+  }
+  .posts {
+    &__header {
+      width: 100%;
+      height: 75px;
+      margin-bottom: 40px;
+      &__title {
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 130%;
+        margin-bottom: 15px;
+      }
+      &__text__blue {
+        width: 146px;
+        height: 24px;
+        span {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        img {
+          width: 16px;
+          height: auto;
+          margin-left: 10px;
+        }
+      }
+
+    }
+    &__video {
+      display: none;
+    }
+    &__text__blue {
+      span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 10px;
+      }
+      img {
+        width: 16px;
+        height: auto;
+      }
+    }
+    &__article {
+      margin-bottom: 40px;
+      .icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        width: 83px;
+        height: 20px;
+        img {
+          width: 16.67px;
+          height: auto;
+        }
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: variables.$text-color-dark;
+        }
+      }
+    }
+    &__blog {
+      .icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 10px;
+        width: 105px;
+        height: 24px;
+        img {
+          width: 16.67px;
+          height: auto;
+        }
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: variables.$text-color-dark;
+        }
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+}

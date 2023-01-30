@@ -3,15 +3,15 @@
 @use "./reset";
 @use "./scroll-bar";
 
+@use "./threeSquare";
+@use "./container-white";
 @use "./header";
+@use "./footer";
+
 @use "./section-01";
 @use "./section-02";
 @use "./section-03";
 @use "./section-04";
 @use "./section-05";
-@use "./threeSquare";
 @use "./section-06";
-
-.sectionSeven {
-  background-color: white;
-}
+@use "./section-07";
