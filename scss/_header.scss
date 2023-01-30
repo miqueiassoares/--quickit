@@ -1,5 +1,6 @@
-@use "./breakpoints";
 @use "./variables";
+@import "./breakpoints";
+
 
 .header {
   margin-top: 10px;
@@ -8,19 +9,54 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
-  width: 375px;
+  width: 100%;
   height: 64px;
+  @include tablet {
+    justify-content: flex-start;
+  }
   &__logo {
     width: 108.75px;
     height: 30px;
+    background: transparent url("../img/logo.png");
+    background-size: 100%;
+    @include tablet {
+      width: 116px;
+      height: 32px;
+    }
   }
   &__nav { 
+    margin-left: -10px;
+    margin-bottom: -4px;
+    @include tablet {
+      margin-left: 30px;
+      display: flex;
+      align-items: center;
+      height: 30px;
+      gap: 20px;
+    }
     &__open__menu {
-      margin-left: -20px;
-      margin-bottom: -7px;
+      margin-top: -5px;
+      width: 18px;
+      height: 18px;
     }
     &__list {
-      display: none;
+      li {
+        width: max-content;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .fiveLinks {
+        display: none;
+        @include tablet {
+          display: flex;
+          gap: 20px;
+        }
+      }
+      .twoLinks {
+        display: none;
+        
+      }
     }
   }
   &__button__request {
@@ -30,5 +66,10 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5rem;
+    @include tablet{
+      position: absolute;
+      right: 20px;
+      padding: 15px 20px;
+    }
   }
 }
