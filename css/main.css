@@ -25,6 +25,12 @@ html, body {
   background-repeat: no-repeat;
   background-position-y: 5.99%;
 }
+@media screen and (min-width: 768px) {
+  .container {
+    background: transparent url("../img/first-section/background-tablet.png");
+    background-position-y: 6.3%;
+  }
+}
 
 button, a {
   cursor: pointer;
@@ -235,6 +241,42 @@ img {
   font-size: 1rem;
   display: block;
 }
+@media screen and (min-width: 768px) {
+  .sectionOne .buttons {
+    margin: auto;
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+    width: 406px;
+    height: 64px;
+  }
+  .sectionOne .buttons button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 64px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .sectionOne__button__request {
   background: #205BF1;
   margin: auto;
@@ -252,14 +294,48 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .sectionOne__button__video img {
+  width: 24px;
+  height: 24px;
   display: none;
+}
+.sectionOne__button__video .text__button {
+  height: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .sectionOne__button__video {
+    gap: 15px;
+    width: 189px;
+    height: 64px;
+  }
+  .sectionOne__button__video img {
+    display: inline-block;
+  }
 }
 .sectionOne .sectionOne__images {
   margin-top: -35px;
 }
-.sectionOne .sectionOne__images img {
+.sectionOne .sectionOne__images .images__mobile {
   width: 100%;
   height: auto;
+}
+.sectionOne .sectionOne__images .images__tablet {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .sectionOne .sectionOne__images {
+    margin-top: 0;
+  }
+  .sectionOne .sectionOne__images .images__mobile {
+    display: none;
+  }
+  .sectionOne .sectionOne__images .images__tablet {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 .sectionOne .images {
   margin-top: 40px;

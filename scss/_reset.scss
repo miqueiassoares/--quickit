@@ -1,4 +1,5 @@
 @use "./variables";
+@import "./breakpoints";
 
 * {
   margin: 0;
@@ -25,6 +26,10 @@ html, body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: 5.99%;
+  @include tablet {
+    background: transparent url("../img/first-section/background-tablet.png");
+    background-position-y: 6.3%;
+  }
 }
 
 button, a {

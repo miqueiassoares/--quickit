@@ -51,6 +51,24 @@
       font-size: 1rem;
       display: block;
     }
+    @include tablet {
+      margin: auto;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      width: 406px;
+      height: 64px;
+      button {
+        display: flex;
+        flex-direction: row;
+        height: 64px;
+        justify-content: center;
+        margin: 0;
+        align-items:center;
+      }
+    }
   }
   &__button__request {
     background: variables.$button-color;
@@ -59,6 +77,9 @@
     width: 177px;
     height: 64px;
     box-shadow: 0px 5px 15px rgba(32, 91, 241, 0.2);
+    @include tablet {
+      
+    }
   }
   &__button__video {
     margin: 20px auto 0px;
@@ -67,15 +88,46 @@
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     img {
+      width: 24px;
+      height: 24px;
       display: none;
+    }
+    .text__button {
+      height: 24px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include tablet {
+      gap: 15px;
+      width: 189px;
+      height: 64px; 
+      img {
+        display: inline-block;
+      }
+      
     }
   }
 
   .sectionOne__images {
     margin-top: -35px;
-    img {
+    .images__mobile {
       width: 100%;
       height: auto;
+    }
+    .images__tablet {
+      display: none;
+    }
+    @include tablet {
+      margin-top: 0;
+      .images__mobile{
+        display: none;
+      }
+      .images__tablet {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
   }
 
