@@ -22,13 +22,15 @@ html, body {
 }
 
 .container {
-  background: transparent url("../img/first-section/background-mibile.png");
+  background: transparent url("../img/first-section/background-mobile.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: 5.99%;
   @include tablet {
     background: transparent url("../img/first-section/background-tablet.png");
     background-position-y: 6.3%;
+    background-size: 100%;
+    background-repeat: no-repeat;
   }
 }
 

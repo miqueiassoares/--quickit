@@ -25,8 +25,7 @@
     }
   }
   &__nav { 
-    margin-left: -10px;
-    margin-bottom: -4px;
+    margin-bottom: -3px;
     @include tablet {
       margin-left: 30px;
       display: flex;
@@ -35,9 +34,18 @@
       gap: 20px;
     }
     &__open__menu {
-      margin-top: -5px;
-      width: 18px;
-      height: 18px;
+      position: absolute;
+      top: 31px;
+      left: 135px;
+      width:24px;
+      height: 24px;
+      @include tablet {
+        position: static;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
     &__list {
       li {

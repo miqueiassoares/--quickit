@@ -1,34 +1,51 @@
-@use "./breakpoints";
 @use "./variables";
+@import "./breakpoints";
 
 .sectionTwo {
   background: transparent url("../img/section-02/background.png");
   background-size: 73%;
   background-repeat: no-repeat;
   background-position: -95px 10px;
-  
-  .sectionTwo__container {
-    padding-top: 30px;
+  @include tablet {
+    background-size: 57%;
+    background-position: -0px 20px;
   }
+  
   .dashboard {
     background: transparent url("../img/section-02/dashboard.png");
+    background-repeat: no-repeat;
     background-size: contain;
-    margin:auto;
-    margin-bottom: 60px;
+    margin: 30px auto 60px;
     width: 335px;
     height: 230px;
-
     filter: drop-shadow(-8px -8px 0px rgba(0, 0, 0, 0.15)) drop-shadow(8px 8px 0px rgba(31, 32, 37, 0.15)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4));
+    @include tablet {
+      margin: 60px auto;
+      background: transparent url("../img/section-02/dashboard-tablet.png");
+      background-size: cover;
+      width: 708px;
+      height: 495px;
+      filter: drop-shadow(-16px -16px 0px rgba(0, 0, 0, 0.5)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4)) drop-shadow(16px 16px 0px rgba(0, 0, 0, 0.5));
+    }
   }
   .create__layouts {
     width: 335px;
     margin: auto;
+    @include tablet {
+      padding: 60px 30px;
+      gap: 10px;
+      width: 768px;
+      height: 586px;
+    }
     &__text {
       display: flex;
       flex-direction: column;
       padding: 0;
       gap: 20px;
       text-align: center;
+      @include tablet {
+        gap: 25px;
+      }
       h3 {
         font-weight: 900;
         font-size: 12px;
@@ -43,11 +60,22 @@
         .text__red {
           color: variables.$text-color-red;
         }
+        @include tablet {
+          font-size: 46px;
+          line-height: 55px;
+        }
       }
       p {
         font-weight: 400;
         font-size: 18px;
         line-height: 26px;
+        @include tablet {
+          margin: auto;
+          width: 570px;
+          height: 60px;
+          font-size: 20px;
+          line-height: 30px;
+        }
       }
     }
     .container__picture {

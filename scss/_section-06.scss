@@ -1,5 +1,5 @@
-@use "./breakpoints";
 @use "./variables";
+@import "./breakpoints";
 
 .sectionSix {
   display: flex;
@@ -10,19 +10,30 @@
   gap: 10px;
   width: 100%;
   height: auto;
+  @include tablet {
+    padding: 60px 0px 0px;
+  }
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
     gap: 30px;
-
     width: 335px;
     height: 582px;
+    @include tablet {
+      padding: 0px;
+      gap: 50px;
+      width: 708px;
+      height: 585px;
+    }
     &__image {
       width: 100vw;
       height: 320px;
       background: linear-gradient(to bottom, transparent 50%, #ffffff 50%);
+      @include tablet {
+        height: 340px;
+      }
       .image {
         background: url("../img/section-06/graph-mobile.png");
         background-size: 100%;
@@ -32,6 +43,16 @@
         height: 100%;
         border: 1px solid rgba(31, 32, 37, 0.05);
         box-shadow: 10px 10px 80px rgba(31, 32, 37, 0.15);
+      }
+      @include tablet {
+        .image {
+          width: 708px;
+          height: 340px;
+          background: transparent url("../img/section-06/graph-tablet.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+          
+        }
       }
     }
   }
@@ -56,6 +77,19 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 26px;
+    }
+    @include tablet {
+      gap: 25px;
+      width: 708px;
+      height: 195px;
+      h2 {
+        font-size: 46px;
+        line-height: 55px;
+      }
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
   }
 }

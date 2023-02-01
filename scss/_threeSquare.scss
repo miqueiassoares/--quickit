@@ -1,5 +1,5 @@
-@use "./breakpoints";
 @use "./variables";
+@import "./breakpoints";
 
 .threeSquares {
   background: transparent;
@@ -15,5 +15,8 @@
     width: 8px;
     height: 8px;
     background: #FFFFFF;
+  }
+  @include tablet {
+    padding: 60px 0px;
   }
 }

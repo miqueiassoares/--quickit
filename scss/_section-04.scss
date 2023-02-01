@@ -1,5 +1,5 @@
-@use "./breakpoints";
 @use "./variables";
+@import "./breakpoints";
 
 .sectionFour {
   display: flex;
@@ -9,6 +9,13 @@
   padding: 30px 20px 0px;
   width: 100%;
   margin-bottom: 30px;
+  position: relative;
+  @include tablet {
+    margin: auto;
+    padding: 60px 30px 60px 0px;
+    width: 768px;
+    height: 782px;
+  }
   &__text {
     display: flex;
     flex-direction: column;
@@ -24,6 +31,12 @@
       align-items: flex-start;
       gap: 20px;
       height: 108px;
+      @include tablet {
+        padding: 0px 0px 0px 30px;
+        gap: 25px;
+        width: 570px;
+        height: 151px;
+      }
       h3 {
         height: 16px;
         font-weight: 900;
@@ -39,6 +52,11 @@
         span.text__blue {
           color: variables.$text-color-blue;
         }
+        @include tablet {
+          font-weight: 900;
+          font-size: 46px;
+          line-height: 55px;
+        } 
       }
     }
     .section__p {
@@ -46,7 +64,7 @@
       flex-direction: column;
       align-items: center;
       padding: 0px;
-      gap: 20px;
+      gap: 20px; 
       div {
         border-left: 2px solid rgba(255, 255, 255, 0.1);
         display: flex;
@@ -59,12 +77,27 @@
           font-weight: 900;
           font-size: 18px;
           line-height: 26px;
+
         }
         p {
           font-weight: 400;
           font-size: 16px;
           line-height: 24px;
           opacity: .7;
+        }
+      }
+      @include tablet {
+        gap: 30px;
+        width: 461px;
+        height: 471px;
+        align-self: flex-end;
+        div {
+          padding: 10px 0px 10px 30px;
+          gap: 15px;
+          h4 {
+            font-size: 20px;
+            line-height: 30px;
+          }
         }
       }
       &__one {
@@ -76,6 +109,15 @@
     img {
       width: 100%;
       height: auto;
+    }
+    @include tablet {
+      position: absolute;
+      width: max-content;
+      top: 260px;
+      left: -215px;
+      img {
+        width: 135%;
+      }
     }
   }
 }

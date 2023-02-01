@@ -1,5 +1,5 @@
-@use "./breakpoints";
 @use "./variables";
+@import "./breakpoints";
 
 footer {
   display: flex;
@@ -17,6 +17,9 @@ footer {
     background-repeat: no-repeat;
     background-position: right -20px;
     background-size: 20%;
+    @include tablet {
+      background-size: 13%;
+    }
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -46,6 +49,10 @@ footer {
           font-weight: 700;
           font-size: 18px;
           line-height: 26px;
+          @include tablet {
+            font-size: 20px;
+            line-height: 30px;
+          }
         }
         ul {
           display: flex;
@@ -70,6 +77,12 @@ footer {
     width: 100%;
     height: 140px;
     border-top: 1px solid rgba(31, 32, 37, 0.03);
+    @include tablet {
+      padding: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
     .rights {
       display: flex;
       flex-direction: column;
@@ -107,7 +120,7 @@ footer {
       align-items: flex-start;
       padding: 0px;
       gap: 20px;
-      width: 100%;
+      width: max-content;
       height: 24px;
     }
   }
